@@ -173,8 +173,8 @@ function assert2XX(res, message) {
 }
 
 function matchComment(comments) {
-  return comments.find(({ title }) => {
-    return title.includes("Benchmark Results") || title.includes("Benchmark Failed");
+  return comments.find(({ body }) => {
+    return body.includes("Benchmark Results") || body.includes("Benchmark Failed");
   });
 }
 
