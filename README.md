@@ -1,6 +1,7 @@
 ## K6 GitHub PR Comments
 
 This library automatically creates a report from K6 execution, and publishes it as a GitHub comment to your Pull Request.
+Will update comment if one already exists, based on finding a matching title.
 
 Thanks to [Dotan Simha](https://github.com/dotansimha) for the initial script.
 
