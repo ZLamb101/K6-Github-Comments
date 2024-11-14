@@ -12,6 +12,7 @@ export function githubComment(data, options) {
   const repo = options.repo;
   const renderTitle = options.renderTitle;
   const renderMessage = options.renderMessage;
+  const alwaysNewComment = options.alwaysNewComment || false;
 
   // Count the thresholds and those that have failed
   let thresholdFailures = 0;
@@ -77,7 +78,7 @@ export function githubComment(data, options) {
     "```",
   ].join("\n");
 
-  if (existingComment) {
+  if (existingComment && !alwaysNewComment) {
     console.log("Updating existing PR comment...");
     updateComment(existingComment.id, body);
   } else {

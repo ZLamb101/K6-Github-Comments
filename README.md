@@ -37,6 +37,7 @@ export function handleSummary(data) {
     pr: __ENV.GITHUB_PR,
     org: "my-username-or-org",
     repo: "repo-name",
+    alwaysNewComment: true,
     renderTitle({ passes }) {
       return passes ? "✅ Benchmark Results" : "❌ Benchmark Failed"; // Here you can choose how to build the title
     },
